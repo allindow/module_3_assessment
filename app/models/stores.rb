@@ -1,30 +1,14 @@
-class Stores
-  def initialize(store)
-    @store = store
+class Stores < OpenStruct
+  def self.service
+    StoreService.new
   end
 
   def self.stores_by_zip(zip)
-    raw_stores = StoreService.new.get_stores_by_zip(zip)
-    raw_stores.each do |store|
-      require "pry"; binding.pry
-      Stores.new(store)
+    raw_stores = service.get_stores_by_zip(zip)[:stores]
+    total = raw_stores[:total]
+    raw_stores.map do |store|
+      Store.new(total, store)
     end
-  end
-
-  def long_name
-  end
-
-  def city
-  end
-
-  def distance
-  end
-
-  def phone_number
-  end
-
-  def store_type
-
   end
 
 end
