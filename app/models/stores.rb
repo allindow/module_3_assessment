@@ -12,4 +12,9 @@ class Stores < OpenStruct
     end
   end
 
+  def self.store_info(id)
+    raw_store = service.get_store_info_by_id(id)[:stores].first
+    Store.new()
+  end
+
 end

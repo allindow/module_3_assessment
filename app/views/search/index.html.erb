@@ -2,7 +2,7 @@
 <ul class="stores-list">
   <% @stores.each do |store| %>
     <li>
-      Name: <%= store.long_name %><br>
+      Name: <%= link_to store.long_name, store_path(store.id) %><br>
       City: <%= store.city %><br>
       Distance: <%= store.distance %><br>
       Phone Number: <%= store.phone %><br>

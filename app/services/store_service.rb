@@ -11,6 +11,12 @@ class StoreService
     parse(response.body)
   end
 
+  def get_store_info_by_id(id)
+    @connection.params["storeID"] = id
+    response = @connection.get "stores((storeId=#{id}))"
+    parse(response.body)
+  end
+
   def parse(response)
     JSON.parse(response, symbolize_names: true)
   end
