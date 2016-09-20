@@ -1,8 +1,12 @@
-<h1>17 Total Stores</h1>
+<h1><%= @stores.first.total %> Total Stores</h1>
 <ul class="stores-list">
   <% @stores.each do |store| %>
     <li>
-      <%= store.long_name %>
+      Name: <%= store.long_name %><br>
+      City: <%= store.city %><br>
+      Distance: <%= store.distance %><br>
+      Phone Number: <%= store.phone %><br>
+      Store Type: <%= store.store_type %>
     </li>
   <% end %>
 </ul>

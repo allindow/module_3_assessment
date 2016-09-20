@@ -1,26 +1,33 @@
 class Store
-  attr_reader :store, :total
   def initialize(total, store)
     @total = total
     @store = store
   end
 
+  def total
+    @total
+  end
+
   def long_name
-    require "pry"; binding.pry
+    store[:longName]
   end
 
   def city
-
+    store[:city]
   end
 
   def distance
+    store[:distance]
   end
 
-  def phone_number
+  def phone
+    store[:phone]
   end
 
   def store_type
-
+    store[:storeType]
   end
 
+  private
+  attr_reader :store
 end
