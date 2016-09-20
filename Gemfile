@@ -1,5 +1,6 @@
 source "https://rubygems.org"
 
+gem 'factory_girl'
 gem 'faraday'
 gem 'figaro'
 gem "rails", "4.1.4"
@@ -28,4 +29,5 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'vcr'
   gem 'webmock'
+  gem 'simplecov', :require => false
 end
