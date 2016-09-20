@@ -50,6 +50,13 @@
         1,
         1,
         null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
         null
       ],
       "/Users/Angela/turing/3module/storedom/app/controllers/orders_controller.rb": [
@@ -94,6 +101,6 @@
         0
       ]
     },
-    "timestamp": 1474385456
+    "timestamp": 1474386194
   }
 }
