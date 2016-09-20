@@ -6,9 +6,9 @@ class StoreService
   end
 
   def get_stores_by_zip(zip)
+    @connection.params["pageSize"] = "15"
     response = @connection.get "stores((area(#{zip},25)))"
-    raw_data = parse(response.body)
-    require "pry"; binding.pry
+    parse(response.body)
   end
 
   def parse(response)
