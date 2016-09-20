@@ -1,0 +1,9 @@
+<h1><%= @store.name %></h1>
+<h2>Store Type: <%= @store.store_type %></h2>
+<h3>Address: <%= @store.address %></h3>
+<h3>Hours of Operation</h3>
+<ul class="hours-list">
+  <% @store.hours.each do |hour| %>
+    <li><%= hour %></li>
+  <% end %>
+</ul>

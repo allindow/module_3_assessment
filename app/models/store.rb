@@ -32,6 +32,18 @@ class Store
     store[:storeId]
   end
 
+  def name
+    store[:name]
+  end
+
+  def address
+    "#{store[:address]} #{store[:address2]}, #{store[:city]}, #{store[:region]}, #{store[:fullPostalCode]}"
+  end
+
+  def hours
+    store[:hoursAmPm].split(";")
+  end
+
   private
   attr_reader :store
 end
