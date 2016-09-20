@@ -6,7 +6,8 @@ class Stores
   def self.stores_by_zip(zip)
     raw_stores = StoreService.new.get_stores_by_zip(zip)
     raw_stores.each do |store|
-      Store.new(store)
+      require "pry"; binding.pry
+      Stores.new(store)
     end
   end
 
@@ -25,5 +26,5 @@ class Stores
   def store_type
 
   end
-  
+
 end

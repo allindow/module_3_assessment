@@ -4,7 +4,7 @@ RSpec.feature "User can search for stores" do
   scenario "by zip code" do
     visit '/'
 
-    fill_in("Search"), with: "80202"
+    fill_in "Search", with: "80202"
     click_on "search"
 
     expect(current_path).to eq("/search")
