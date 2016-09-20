@@ -2,11 +2,11 @@
   <div class="row">
     <div class="col-sm-12">
       <%= form_tag :search_index, method: :get, class: "form-inline" do %>
-            <div class="form-group search-field">
-              <%= text_field_tag :zip, "Search by zip...", class: "form-control" %>
-              <%= submit_tag "search", class: "btn btn-primary" %>
-            </div>
-            <% end %>
+        <div class="form-group search-field">
+          <%= text_field_tag :zip, "Search by zip...", class: "form-control" %>
+          <%= submit_tag "search", class: "btn btn-primary" %>
+        </div>
+      <% end %>
       <h1><%= @items.count %> Items</h1>
     </div>
   </div>

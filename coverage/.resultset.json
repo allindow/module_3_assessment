@@ -20,9 +20,9 @@
       "/Users/Angela/turing/3module/storedom/app/services/store_service.rb": [
         1,
         1,
-        4,
-        4,
-        4,
+        5,
+        5,
+        5,
         null,
         null,
         1,
@@ -32,13 +32,13 @@
         null,
         null,
         1,
-        1,
-        1,
-        1,
+        2,
+        2,
+        2,
         null,
         null,
         1,
-        4,
+        5,
         null,
         null
       ],
@@ -226,6 +226,6 @@
         0
       ]
     },
-    "timestamp": 1474393566
+    "timestamp": 1474394331
   }
 }

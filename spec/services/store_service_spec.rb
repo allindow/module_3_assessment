@@ -13,5 +13,17 @@ describe StoreService do
       end
     end
 
+    it "gets one stores info by store ID" do
+      VCR.use_cassette("one_stores_info") do
+        store = StoreService.new.get_store_info_by_id("2730")
+
+        expect(store[:stores].count).to eq(1)
+        expect(store[:stores].first[:name]).to eq("Town Center at Aurora")
+        expect(store[:stores].first[:phone]).to eq("303-326-0848")
+        expect(store[:stores].first[:address]).to eq("14200 East Alameda Avenue")
+      end
+
+    end
+
   end
 end
