@@ -41,6 +41,19 @@ RSpec.describe "Items requests", type: :request do
     expect(Item.count).to eq(0)
   end
 
+  it "should create an item" do
+    expect(Item.count).to eq(0)
+
+    post 'api/v1/items?name=thing1&description=description1&image_url=https://robohash.org/1'
+
+    expect(Item.count).to eq(1)
+    expect(Item.last.name).to eq("thing1")
+    expect(json(response)["name"]).to eq("thing1")
+    expect(json(response)["description"]).to eq("description1")
+    expect(json(response)["image_url"]).to eq("https://robohash.org/1")
+  end
+
+
   def json(response)
     JSON.parse(response.body)
   end
